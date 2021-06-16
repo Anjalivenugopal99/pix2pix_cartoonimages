@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+
+</head>
+<style>
+    .button {
+      padding: 15px 25px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #04AA6D;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 8px #999;
+    }
+    
+    .button:hover {background-color: #3e8e41}
+    
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    </style>
+<body>
+    <p style="color:rgb(3, 3, 73);font-size:50px;text-align: center">Draw a pic!</p>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <canvas id="canvas" width="450" height="450" style="position:absolute;top:15%;left:10%;border:8px solid;"></canvas>
+    <img id="canvasimg" style="position:absolute;top:15%;left:10%;width:450;height:450;display:none;">
+    <img id="letterImg" style="position:absolute;top:15%;left:60%;width:450;height:450;">
+    <input type="button" button class="button" value="classify" id="sb" size="42" style="position:absolute;top:575;left:10%;"> >
+    <!-- style="position:absolute;top:400;left:100;"> -->
+    <input type="button" button class="button" value="clear" id="cb" size="42" style="position:absolute;top:575;left:36.5%;">
+    <!-- style="position:absolute;top:400;left:180;"> -->
+    <!-- <script src="canvas_data.js" type="module"></script> -->
+    <script src="canvas_script.js" type="module"></script>
+    <!-- <script src="https://apis.google.com/js/platform.js?onload=myFunc" async defer></script> -->
+</body>
+</html> 
