@@ -59,12 +59,36 @@ function save() {
     var tensor = tensor.div(127.5);
     var tensor = tensor.sub(1);
     
+    // console.log(tensor);
     const prediction = window.model.apply(tensor,{'training':true});
-    
+    // const prediction = model.apply(tensor,{'training':true});
+    // const data =  prediction.data();
     const data = prediction.dataSync();
 
+    //  console.log("prediction"+ p rediction);
+    // create an image from the prediction
+    // let imageData = new ImageData(256, 256)
+    // imageData.data.set(data)
     var images = document.getElementById('letterImg'); 
-    
+    // var ctx = images.getContext("2d");
+    // ctx.putImageData(imageData);
+
+    // var pIndex = tf.argMax(prediction, 1).dataSync();
+    // console.log("pIndex"+ pIndex);
+            
+    // var predictedLetter = classNames[pIndex];
+    // var images = document.getElementById('letterImg'); 
+    // var randomLetter = images.getAttribute("letter");
+    // if(predictedLetter == randomLetter)
+    // {
+    //     alert("You are correct!");
+    //     getAndAddImage();
+    //     erase();
+
+    // }
+    // else{
+    //     alert("Oops!! Try again")
+    // }
     const canvas = document.createElement('canvas');
   canvas.width = imgWidth;
   canvas.height = imgHeight;
