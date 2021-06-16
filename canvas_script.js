@@ -4,7 +4,7 @@ var rawImage;
 const imgWidth = 256;
 const imgHeight = 256;
 
-tf.loadLayersModel('/model/kerasnewweb/model.json').then(function(model) {
+tf.loadLayersModel('model/kerasnewweb/model.json').then(function(model) {
     window.model = model;
   });
 // await tf.setBackend('cpu');
